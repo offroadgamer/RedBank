@@ -1,3 +1,5 @@
+package src.com.Redbank;
+
 public class Account {
 
     private String accountName;

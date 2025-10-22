@@ -1,3 +1,5 @@
+package src.com.Redbank;
+
 import java.util.Scanner;
 
 public class Console {
