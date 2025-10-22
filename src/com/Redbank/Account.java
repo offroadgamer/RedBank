@@ -6,19 +6,25 @@ public class Account {
     private int accountNumber;
     private double balance;
 
-    public Account(String accountName, int accountNumber, double balance) {
+    public Account(String accountName, double balance) {
         this.accountName = accountName;
-        this.accountNumber = accountNumber;
+        double accNum = Math.random() * 10_000_000;
+        this.accountNumber = (int) accNum;
         this.balance = balance;
     }
 
-    public Account(String accountName, int accountNumber) {
+    public Account(String accountName) {
         this.accountName = accountName;
-        this.accountNumber = accountNumber;
+        double accNum = Math.random() * 10_000_000;
+        this.accountNumber = (int) accNum;
         this.balance = 0;
     }
 
     public void updateBalance(double balance) {
         this.balance = balance;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 }
