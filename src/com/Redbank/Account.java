@@ -20,8 +20,12 @@ public class Account {
         this.balance = 0;
     }
 
-    public void updateBalance(double balance) {
-        this.balance = balance;
+    public void depositMoney(double amount) {
+        this.balance += amount;
+    }
+
+    public void withdrawMoney(double amount) {
+        this.balance -= amount;
     }
 
     public double getBalance() {

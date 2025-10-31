@@ -4,7 +4,36 @@ import java.util.Scanner;
 
 public class Console {
 
+    private Account account;
+
     private static Scanner scanner = new Scanner(System.in);
+
+    public void console() {
+        System.out.print("> ");
+        while (true) {
+            switch (scanner.nextLine()) {
+                case "exit":
+                    break;
+                case "deposit":
+                    deposit();
+                case "withdraw":
+                    withdraw();
+            }
+            if (scanner.nextLine().equalsIgnoreCase("exit")) {
+                break;
+            }
+        }
+    }
+
+    private void deposit() {
+        System.out.println("How much do you want to deposit?");
+        System.out.print("> ");
+        double amountToDeposit = scanner.nextDouble();
+    }
+
+    private void withdraw() {
+
+    }
 
     public String getString() {
         System.out.print("> ");
